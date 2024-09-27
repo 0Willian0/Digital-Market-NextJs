@@ -1,0 +1,43 @@
+.header{
+    grid-area: header;
+    background: linear-gradient(to right, #1e469a, #49a7c1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 100;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.title a{
+    color: #fff;
+    text-decoration: none; /*tira o efeito de link*/ 
+}
+
+.title:hover a{
+    color: #fff;
+    text-decoration: none; /*tira o efeito de link*/ 
+}
+
+header.header > a.toggle{
+    width: 60px;
+    height: 100%;
+    color: #fff;
+    justify-self: flex-start;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.header > a.toggle:hover{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+}

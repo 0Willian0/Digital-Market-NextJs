@@ -1,0 +1,102 @@
+.menu{
+    grid-area: menu;
+    background: linear-gradient(to right, #232526, #414345);
+  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .menu a,
+  .menu a:hover{
+    color: #FFF;
+    text-decoration: none;
+  }
+  
+  .menu .tree-node.selected > .tree-content,
+  .menu .tree-node .tree-content:hover{
+    background-color: rgba(255,255,255,0.2);
+  }
+  
+  .tree-arrow.has-child{
+    filter: brightness(2);
+  }
+  
+  .menu .menu-filter{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  
+    margin: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #AAA;
+  }
+  
+  .menu .menu-filter i{
+    color: #AAA;
+    margin-right: 10px;
+    padding-top: 8px;
+  }
+  
+  .menu input{
+    color: #CCC;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+  }
+  
+  .ant-input:focus, .menu input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  
+  .tree-filter-empty{
+    color: #CCC;
+    font-size: 1.3rem;
+    margin-left: 20px;
+  }
+  
+  .ant-tree-title{
+    font-size: 20px;
+    color:#FFF;
+  }
+  
+  .ant-tree-list-holder-inner{
+    background: linear-gradient(to right, #232526, #414345);
+  }
+  
+  .ant-tree-switcher{
+    size: 60px;
+    color:#FFF;
+  }
+  
+  :where(.css-dev-only-do-not-override-qnu6hi).ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected, 
+  :where(.css-dev-only-do-not-override-qnu6hi).ant-tree .ant-tree-checkbox+span.ant-tree-node-selected{
+    background-color: transparent;
+  }
+  
+  :where(.css-dev-only-do-not-override-qnu6hi).ant-input-outlined:focus, 
+  :where(.css-dev-only-do-not-override-qnu6hi).ant-input-outlined:focus-within{
+    color:#FFFF;
+    background-color: transparent;
+  }
+  
+  .ant-input:hover{
+    background-color: transparent;
+  }
+  
+  .ant-input::placeholder{
+    color:#FFF;
+  }
+  
+  :where(.css-dev-only-do-not-override-qnu6hi).ant-tree .ant-tree-switcher{
+    width: 40px;
+  }
+  
+  svg{
+    width: 20px;
+    height: 20px;
+  }
