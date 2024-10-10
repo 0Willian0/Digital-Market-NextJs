@@ -17,11 +17,15 @@ interface AppState {
 const appSlice = createSlice({
   name: 'app',
   initialState: {
-    isMenuVisible: true,
+    isMenuVisible: false,
     user: null, // Inicializa o usuário como nulo
   } as AppState,
   reducers: {
     toggleMenu(state, action: PayloadAction<boolean | undefined>) {
+      if (!state.user) {
+        state.isMenuVisible = false;
+        return;
+      }
       const isVisible = action.payload;
       state.isMenuVisible = isVisible !== undefined ? isVisible : !state.isMenuVisible;
     },

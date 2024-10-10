@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
 import '../../styles/Content.css'
 
+const Content = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="content">
+      <main>{children}</main>
+    </div>
+    ) 
+};
 
-const Content: React.FC = ()=>{
-    return(
-        <div className="content">
-
-        </div>
-    )
-}
-
-export default Content
+export default Content;

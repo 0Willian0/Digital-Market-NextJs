@@ -4,15 +4,19 @@ import React from "react";
 import '../../styles/Header.css';
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMenu } from "@/app/config/store";
+import UserDropdown from "./UserDropdown";
+import Link from "next/link";
+import UserBalance from "./UserBalance";
 
 // Definindo as propriedades do componente
 interface HeaderProps {
   title: string;
   hideToggle: boolean; // Use 'boolean' em minúsculas
+  hideUserDropdown:boolean
 }
 
 // Componente Header
-const Header: React.FC<HeaderProps> = ({ title, hideToggle }) => {
+const Header: React.FC<HeaderProps> = ({ title, hideToggle, hideUserDropdown }) => {
   // Definindo a tipagem do estado da aplicação
   const isMenuVisible = useSelector((state: { app: { isMenuVisible: boolean } }) => state.app.isMenuVisible); // Tipando o estado
   const dispatch = useDispatch(); // Chama reducers
@@ -32,7 +36,24 @@ const Header: React.FC<HeaderProps> = ({ title, hideToggle }) => {
           <i className={`fa fa-lg ${icon}`}></i>
         </a>
       )}
-      <h1 className="title">{title}</h1>
+
+      {!hideUserDropdown?(<h1 className="title">
+          <Link href="/">
+            {title}
+          </Link>
+        </h1>):
+        (<h1 className="title">
+        {title}
+        </h1>)}
+      
+        {!hideUserDropdown && 
+        (
+          <>
+            <UserBalance/>
+            <UserDropdown/>
+          </>
+        )}
+      
     </header>
   );
 };

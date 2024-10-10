@@ -6,7 +6,7 @@
     margin: 0;
   }
   
-  #page {
+  #page-content {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   
@@ -20,7 +20,7 @@
       "menu footer";
   }
   
-  #page.hide-menu {
+  #page-content.hide-menu {
     grid-template-areas: 
       "header header"
       "content content"
