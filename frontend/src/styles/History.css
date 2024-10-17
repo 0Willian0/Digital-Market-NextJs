@@ -1,0 +1,14 @@
+.history ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px;
+    justify-content: left;
+}
+
+.history li{
+    flex-basis: 300px;
+    text-align: left;
+}

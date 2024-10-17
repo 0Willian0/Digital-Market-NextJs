@@ -7,6 +7,7 @@ import { toggleMenu } from "@/app/config/store";
 import UserDropdown from "./UserDropdown";
 import Link from "next/link";
 import UserBalance from "./UserBalance";
+import UserCart from "./UserCart";
 
 // Definindo as propriedades do componente
 interface HeaderProps {
@@ -49,6 +50,7 @@ const Header: React.FC<HeaderProps> = ({ title, hideToggle, hideUserDropdown }) 
         {!hideUserDropdown && 
         (
           <>
+            <UserCart/>
             <UserBalance/>
             <UserDropdown/>
           </>

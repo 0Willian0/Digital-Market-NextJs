@@ -8,6 +8,7 @@ import { userKey } from "@/app/config/global";
 interface User{
     name?:string
     imageUrl?:string
+    admin?:boolean
 }
 
 const UserDropdown: React.FC = ()=>{
@@ -35,7 +36,8 @@ const UserDropdown: React.FC = ()=>{
                 <i className="fa fa-angle-down"></i>
             </div>
             <div className="user-dropdown-content">
-                <Link href="/admin"><i className="fa fa-cogs"> Administração</i></Link>
+                {user.admin && (<Link href="/admin"><i className="fa fa-cogs"> Administração</i></Link>)}
+                <Link href="/history"><i className="fa fa-history"> Historico</i></Link>
                 <Link onClick={logout} href="/auth"><i className="fa fa-sign-out"> Sair</i></Link>
             </div>
         </div>
